@@ -1,0 +1,190 @@
+import java.util.Scanner;
+
+  public class Main{
+    public static void main(String[] args){
+      Scanner imput = new Scanner(System.in);
+     
+      System.out.print("escreva seu genero ");
+      String G = imput.next();
+      if(G.equals("Justen")){
+    System.out.printf("Otto te irritou até você morrer");
+      return;
+  }
+      System.out.print("escolha seu funcionario (Fernando, Lud, Barbara ou Clarencio) ");
+      String F = imput.next();
+     
+      if(G.equals("masculino")){
+          if(F.equals("Lud")|| F.equals("Barbara")){
+        System.out.printf("você é o dono de uma biblioteca e você tem apenas uma funcionaria, chamada "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+          else if(F.equals("Fernando")||F.equals("Clarencio")){
+     System.out.printf("você é o dono de uma biblioteca e você tem apenas um funcionario, chamado "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+       
+ } else if(G.equals("feminino")){
+        if(F.equals("Lud")|| F.equals("Barbara")){
+        System.out.printf("você é a dona de uma biblioteca e você tem apenas uma funcionaria, chamada "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+        else if(F.equals("Fernando")||F.equals("Clarencio")){
+     System.out.printf("você é a dona de uma biblioteca e você tem apenas um funcionario, chamado "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+ } else if(G.equals("neutro")){
+        if(F.equals("Lud")|| F.equals("Barbara")){
+        System.out.printf("você é donex de uma biblioteca e você tem apenas uma funcionaria, chamada "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+        else if(F.equals("Fernando")||F.equals("Clarencio")){
+     System.out.printf("você é donex de uma biblioteca e você tem apenas um funcionario, chamado "+F+", você tem que calcular o quanto "+F+" ganhou esse mês.\n");
+ }
+ }  else{
+        System.out.printf("genero não reconhecido.");
+        return;
+  }
+     
+      System.out.print(F+" trabalhou por quantas horas esse mês? ");
+      int x = imput.nextInt();
+      if(x>720){
+        System.out.printf("acho que você tem retardo mental como alguem vai trabalhar " +x+ " horas esse mês se o mês só tem 720 horas?!");
+      }
+      else if(x>240){
+        System.out.printf("você foi preso pois a carga maxima de trabalho que é permitida exigir de um funcionario é de 8 horas por dia ou 240 por mês e não de "+x+" horas por mês");
+      }
+      else{
+      System.out.print(F+" ganha quanto por hora? ");
+      int y = imput.nextInt();
+      int z;
+      z=x*y;
+
+      if(F.equals("Fernando")){
+      if(z>=5000){
+          System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+          System.out.printf("você achou uma carta de Fernando em sua mesa, deseja abri-la? ");
+          String D= imput.next();
+          if(D.equals("não")){
+          System.out.printf("Fernando que estava te olhando esprançoso começou a chorar e foi embora. \n");
+          }else if(D.equals("sim")){
+          System.out.printf("chefe você é a melhor pessoa que eu conheço e eu acho que te amo.você quer casar comigo? \n");
+          System.out.printf("você olha para o lado e lá esta Fernando ajoelhado no chão com um anel em mãos esperando sua resposta\n");
+          System.out.printf("você quer se casar com Fernando? ");
+           String DF= imput.next();
+          if(DF.equals("não")){
+          System.out.printf("Fernando pegou uma faca e te matou logo em seguida se matou tambem\n");
+          }else if(DF.equals("sim")){
+          System.out.printf("vocês tiveram um casamento lindo e tiveram 27 filhos");
+          }else{
+              System.out.printf("não entendemos sua resposta");
+              return;
+          }
+             
+         }
+      }
+      else if(z>=1200){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês");
+        return;
+      }
+      else if(z<1200){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+        System.out.printf("por considerar seu salario muito baixo Fernando se demitiu.\n");
+        System.out.print("você deseja ver sua carta de demição? ");
+        String D= imput.next();
+        if(D.equals("não")){
+          System.out.printf("ok");
+          return;
+    } else if(D.equals("sim")){
+          System.out.printf("você sempre foi uma merda de chefe e eu sempre te odiei. Você paga mal, é rude, irritante e fede muito. Já estava pensando em me demitir a muito tempo, mas agora eu já não aguento mais to indo embora e espero que você morra. ass: Fernando de Sousa. ");
+    } else {System.out.printf("não identificamos sua resposta");
+        return;
+    }
+    }
+    }
+    else if(F.equals("Lud")){
+        if(z>=15000){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês");
+        System.out.printf(F+" ficou tão feliz que saiu para pedir sua namorada Barbara em casamento e pediu para você ser o padrinho\n");
+        System.out.print("você aceita? \n");
+        String D= imput.next();
+        if(D.equals("sim")){
+        System.out.printf("foi um lindo casamento cheio de livros e com tematica do percy jackson\n");
+        System.out.printf("\n");
+        System.out.printf("seis anos depois você faliu por pagar um salario maior para sua funcionaria do que você rende em sua loja \n");
+        System.out.printf("mas pelo menos virou padrinho dos 3 filhos delas tambem");
+        }else if(D.equals("não")){
+        System.out.printf("você fez a Lud chorar!\n");
+        System.out.printf("nisso você começa a ouvir paginas de livros sendo folheadas rapidamente\n");
+        System.out.printf("e do escuro surge uma outra figura baixa e você a reconhece\n");
+        System.out.print("era a Barbara. Namorada da Lud com uma voz monstruosamente medonha ela fala: VOCÊ IRRITOU A LUD? \n");
+          String DF= imput.next();
+          if(DF.equals("sim")){
+          System.out.printf("você começa a ver uma serie de livros ( do percy jackson) voando ao seu redor e eles começam a se tacar em você batendo com cada vez mais força até você morrer");
+          }
+          else if(DF.equals("não")){
+           System.out.printf("Barbara começa a gargalhar com sua voz medonha e profere as palavras: MENTIROSO DE MERDA\n");
+            System.out.printf("e com uma unica mordida Barbara separa sua cabeça do resto do seu corpo");
+          }
+        }else{System.out.printf("não  entendemos sua resposta");
+        return; }
+      }
+      else if(z>=2400){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+        System.out.printf(F+" ficou satisfeita com seu salário e te agradesceu e foi embora.\n");
+        System.out.printf("você ficou aliviado por não ter irritado ela pois você sabe que coisas muito ruins acontecem quando ela perde a calma\n");
+        System.out.printf("mas você sabe que essa calma dela não durará para sempre então você decide fugir do país\n");
+        System.out.print("para qual país você vai (EUA, Alemanha ou Angola)\n");
+        String D= imput.next();
+        if(D.equals("EUA")){
+        System.out.printf(F+" corre até la atrás de você e corta sua cabeça pois não importa o quão longe você vá. ELA SEMPRE TE ALCANÇARÁ");
+        }
+        else if(D.equals("Alemanha")){
+        System.out.printf("você está seguro pois mesmo podendo te alcansar ela não gosta de pessoas arianas então não vai para "+D);
+        }
+        else if(D.equals("Angola")){
+        System.out.printf("você foi morto sem ela nem precisar ir atrás de você pois ela tem muitos conhecidos lá");
+        }
+        else{System.out.printf("não identificamos sua resposta");
+        return;}
+      }
+      else if(z<2400){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+        System.out.printf(F+", ao ver que ganhou um salário menor do que esperava ficou furiosa e mesmo com apenas 1,52 ela atacou você.\n");
+        System.out.printf("você acorda em um quarto de hospital e descobre que teve 7 costelas quebradas, uma perna amputada, perdeu 2 dedos e toda a audição\n");
+        System.out.printf("dizem que tentando te matar ela levou 57 policiais a óbito e que você so não foi morto pois as forças especial chegaram para te salvar");
+        return;
+    }
+    }
+      else if(F.equals("Barbara")){
+          if(z>=50000){
+          System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+          System.out.printf("pela primeira vez você viu ela se animar com algo que não fosse livro e ate se sentiu feliz por ela \n");
+          System.out.printf("mas toda felicidade dura pouco você viu ela mudar de uma pessoa calma educada para uma pessoa arrogante e mesqueinha em instantes\n");
+          System.out.printf("ela começou a falar no quanto ela era melhor que você e que a loja agora era dela e como você egora era um merda que não valia nada\n");
+          System.out.printf("ela comprou a sua loja e começou a ler todos os livros freneticamente com pausas para ela te bater e te humilhar \n");
+          System.out.printf("dias depois você esta pensando se vale apena ir para o trbalho mesmo sabendo que a "+F+" vai estar lá\n");
+          System.out.printf("você vai para o trabalho?");
+          String D= imput.next();
+          if(D.equals("sim")){
+              System.out.printf("você chega na loja e ao abrir a porta algo te espanta você ve a "+F+" no chão comemdo enlouquecidamente os seus livros\n");
+              System.out.printf("ela percebe você lá e se levanta você repara que ela esta levitando e todos os livros da biblioteca tambem \n");
+              System.out.printf("os livros começaram a voar batendo em todos os cantos danificando a estrutura você assustado tenta sair mas os livros bloqueiam a porta e comaçam a te bater\n");
+              System.out.printf("você desesperado implora por sua vida mas ela apenas ri minutos depois o teto começa a desabar e você morre soterrado");
+          }
+          else if(D.equals("não")){
+             
+          }
+        return;  }
+        if(z>=4800){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+          System.out.printf("mas ela entregou todo o dinheiro na sua mão e pediu para ganhar seu salario em livros");
+        return; }
+     
+      else if(z>=1200){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+        System.out.printf("mas ela entregou todo o dinheiro na sua mão e pediu para ganhar seu salario em livros");
+        return;}
+     
+      else if(z<1200){
+        System.out.printf(F+" ganhou " +z+ " reais esse mês\n");
+        System.out.printf("mas ela entregou todo o dinheiro na sua mão e pediu para ganhar seu salario em livros");
+       return;}
+      }
+    }
+    }
+}
